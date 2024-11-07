@@ -1,33 +1,26 @@
-# zoro-protocol
+<h1 align="center">Zoro protocol</h1>
 
-zoro-protocol
-Run:
+## About
 
-- yarn
-- yarn start
+Zoro is an EVM compatible protocol that enables supplying of crypto assets as collateral in order to borrow the base asset. Accounts can also earn interest by supplying the base asset to the protocol.
 
-Modified:
+## How to run
 
-- RPC URLs and Endpoints in constants/endpoints.ts
-- social links in footer/constants.ts
+1.  Install dependencies
 
-Update the JSON deployment addresses
+    ```bash
+    yarn install
+    ```
 
-- after building your contracts (yarn deploy-zksync)
-- cd ~/zoro-protocol/deploy
-- cp *.json src/constants/contract/addresses/
+2.  Run the application
 
-Removed:
+    ```bash
+    yarn dev
+    ```
 
-- removed generatePancakeSwapTokens + from postinstall
-- removed storybook
-- removed graphql queries for now [./src/config/codegen.ts] in postinstall
-- removed test setup in vite config
-- removed Sentry ErrorLoggerProvider in index.tsx
-- removed constants in types/index.ts and config/
+## Screenshot
 
-ToDo:
+<p align="center">
 
-- clean up translations/en.json
-- add error handlig to ConnectWallet button
-- Update the addresses in contract/addresses/main.json
+  <img src="./screen/main.png" width="500">
+</p>
