@@ -15,66 +15,24 @@ import {
   InterestRateChart,
   InterestRateChartProps,
   SecondaryButton,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d792741 (fix the decimals)
   Spinner
-} from 'components'
-import { COMPOUND_MANTISSA } from 'constants/compoundMantissa'
-import PLACEHOLDER_KEY from 'constants/placeholderKey'
-import { routes } from 'constants/routing'
-import { TOKENS } from 'constants/tokens'
-import { BLOCKS_PER_DAY } from 'constants/zk'
-<<<<<<< HEAD
-=======
-import { SECONDS_PER_DAY } from 'constants/zk'
->>>>>>> d792741 (fix the decimals)
-import { useAuth } from 'context/AuthContext'
-import { useHideXlDownCss, useShowXlDownCss } from 'hooks/responsive'
-import useOperationModal from 'hooks/useOperationModal'
+} from '../../components'
+
+import { COMPOUND_MANTISSA } from '../../constants/compoundMantissa'
+import PLACEHOLDER_KEY from '../../constants/placeholderKey'
+import { routes } from '../../constants/routing'
+import { TOKENS } from '../../constants/tokens'
+import { BLOCKS_PER_DAY } from '../../constants/zk'
+import { SECONDS_PER_DAY } from '../../constants/zk'
+import { useAuth } from '../../context/AuthContext'
+import { useHideXlDownCss, useShowXlDownCss } from '../../hooks/responsive'
+import useOperationModal from '../../hooks/useOperationModal'
 import React, { useMemo } from 'react'
 import { Redirect, RouteComponentProps } from 'react-router-dom'
-import { useTranslation } from 'translation'
-import { Asset } from 'types'
-<<<<<<< HEAD
-=======
-  Spinner,
-} from "components";
-import { COMPOUND_MANTISSA } from "constants/compoundMantissa";
-import PLACEHOLDER_KEY from "constants/placeholderKey";
-import { routes } from "constants/routing";
-import { TOKENS } from "constants/tokens";
-import { BLOCKS_PER_DAY } from "constants/zk";
-import { SECONDS_PER_DAY } from "constants/zk";
-import { useAuth } from "context/AuthContext";
-import { useHideXlDownCss, useShowXlDownCss } from "hooks/responsive";
-import useOperationModal from "hooks/useOperationModal";
-import React, { useMemo } from "react";
-import { Redirect, RouteComponentProps } from "react-router-dom";
-import { useTranslation } from "translation";
-import { Asset } from "types";
->>>>>>> 92097fc (blocks per day)
-=======
->>>>>>> d792741 (fix the decimals)
-=======
-  Spinner,
-} from '@/components';
-import { COMPOUND_MANTISSA } from '@/constants/compoundMantissa';
-import PLACEHOLDER_KEY from '@/constants/placeholderKey';
-import { routes } from '@/constants/routing';
-import { TOKENS } from '@/constants/tokens';
-import { BLOCKS_PER_DAY } from '@/constants/zk';
-import { SECONDS_PER_DAY } from '@/constants/zk';
-import { useAuth } from '@/context/AuthContext';
-import { useHideXlDownCss, useShowXlDownCss } from '@/hooks/responsive';
-import useOperationModal from '@/hooks/useOperationModal';
-import React, { useMemo } from 'react';
+import { useTranslation } from '../../translation'
+
 // import { Redirect, RouteComponentProps } from 'react-router-dom';
-import { useTranslation } from '@/translation';
 import { Asset } from '@/types';
->>>>>>> 2df7027 (first steps, render dashboard)
 import {
   areAddressesEqual,
   formatCentsToReadableValue,
@@ -137,19 +95,7 @@ export const MarketUi: React.FC<MarketUiProps> = ({
       // prettier-ignore
       dailySupplyInterestsCents: asset && +asset.supplyBalanceCents * (((1 + asset.supplyRatePerBlockTokens.toNumber()) ** SECONDS_PER_DAY) - 1),
       // prettier-ignore
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       dailyBorrowInterestsCents: asset && +asset.borrowBalanceCents * (((1 + asset.borrowRatePerBlockTokens.toNumber()) ** BLOCKS_PER_DAY) - 1)
-=======
-      dailyBorrowInterestsCents: asset && +asset.borrowBalanceCents * (((1 + asset.borrowRatePerBlockTokens.toNumber()) ** SECONDS_PER_DAY) - 1),
->>>>>>> 92097fc (blocks per day)
-=======
-      dailyBorrowInterestsCents: asset && +asset.borrowBalanceCents * (((1 + asset.borrowRatePerBlockTokens.toNumber()) ** SECONDS_PER_DAY) - 1)
->>>>>>> d792741 (fix the decimals)
-=======
-      dailyBorrowInterestsCents: asset && +asset.borrowBalanceCents * (((1 + asset.borrowRatePerBlockTokens.toNumber()) ** SECONDS_PER_DAY) - 1),
->>>>>>> 2df7027 (first steps, render dashboard)
     }),
     [
       asset?.supplyRatePerBlockTokens,

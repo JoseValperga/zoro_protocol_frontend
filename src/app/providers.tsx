@@ -24,8 +24,7 @@ const injected = injectedModule();
 const coinbase = coinbaseModule({ darkMode: true });
 const walletConnect = walletConnectModule({
   projectId: '0f87fc2cf39e518bda94e227dc61150d',
-  dappUrl: 'https://zoro-protocol.netlify.app/', //  http://app.zoroprotocol.com/
-});
+  dappUrl: 'http://app.zoroprotocol.com/',
 const ledger = ledgerModule({
   projectId: '0f87fc2cf39e518bda94e227dc61150d',
   walletConnectVersion: 2,
@@ -33,7 +32,7 @@ const ledger = ledgerModule({
 const trust = trustModule();
 const trezorOptions = {
   email: 'test@test.com',
-  appUrl: 'https://zoro-protocol.netlify.app/', //  http://app.zoroprotocol.com/
+  appUrl: 'http://app.zoroprotocol.com/',
 };
 const trezor = trezorModule(trezorOptions);
 const wallets = [injected, trust, coinbase, walletConnect, ledger, trezor];
